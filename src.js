@@ -52,9 +52,8 @@ const switchMode = () => {
 }
 recording.onended = () => switchMode();
 document.addEventListener('keydown', e => {
-    console.error(e.keyCode);
+    e.preventDefault();
     if (e.keyCode == 32) {
-        console.error(2);
         switchMode();
     }
 });
